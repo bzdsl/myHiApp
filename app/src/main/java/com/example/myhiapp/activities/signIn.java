@@ -30,6 +30,7 @@ public class signIn extends AppCompatActivity {
         setContentView(binding.getRoot());
         setListeners();
     }
+
     private void setListeners() {
         binding.textCreateNewAccount.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), signUp.class)));
@@ -39,7 +40,7 @@ public class signIn extends AppCompatActivity {
             }
         });
     }
-
+    //get details from firebase
     private void signIn(){
         loading(true);
         FirebaseFirestore database = FirebaseFirestore.getInstance();
@@ -60,12 +61,13 @@ public class signIn extends AppCompatActivity {
                         startActivity(intent);
                     }else  {
                         loading(false);
-                        showToast("Unable to sign in");
+                        showToast("Tài khoản không chính xác");
                     }
                 });
 
     }
 
+    //animation loading
     private void loading(Boolean isLoading) {
         if(isLoading) {
             binding.buttonSignIn.setVisibility(View.INVISIBLE);
@@ -82,12 +84,12 @@ public class signIn extends AppCompatActivity {
     //check valid email và password
    private Boolean isValidSignInDetails(){
         if(binding.inputEmail.getText().toString().trim().isEmpty()) {
-            showToast("Enter email");
+            showToast("Nhập email");
             return false;
         }else if(!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText()).matches()){
-            showToast("Enter valid email");
+            showToast("Nhập lại email");
         }else if(binding.inputPassword.getText().toString().isEmpty()) {
-            showToast("Please enter password");
+            showToast("Nhập lại mật khẩu");
             return false;
         }else {
             return true;

@@ -107,34 +107,34 @@ public class signUp extends AppCompatActivity {
                 }
             }
     );
-    //check input thông tin
+    //check input information
     private Boolean isValidSignUpDetails() {
         if (encodedImage == null) {
-            showToast("Select profile image");
+            showToast("Chọn ảnh");
             return false;
         }else if (binding.inputName.getText().toString().trim().isEmpty()) {
-            showToast("Enter name");
+            showToast("Nhập tên");
             return false;
         }else if (binding.inputEmail.getText().toString().trim().isEmpty()) {
-            showToast("Enter Email");
+            showToast("Nhập Email");
             return false;
         }else if (!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText().toString()).matches()){
-            showToast("Enter valid email");
+            showToast("Email không hợp lệ");
         }else if (binding.inputPassword.getText().toString().trim().isEmpty()) {
-            showToast("Enter password");
+            showToast("Nhập mật khẩu");
             return false;
         }else if (binding.inputConfirmpassword.getText().toString().trim().isEmpty()) {
-            showToast("Confirm your password");
+            showToast("Nhập lại mật khẩu");
             return false;
         }else if (!binding.inputPassword.getText().toString().equals(binding.inputConfirmpassword.getText().toString())) {
-            showToast("Incorrect password");
+            showToast("Mật khẩu không khớp");
             return false;
         }else {
             return true;
         }
         return false;
     }
-    // progress bar nút sign in
+    // progress bar signin button
     private void loading(Boolean isLoading) {
         if(isLoading) {
             binding.buttonSignUp.setVisibility(View.INVISIBLE);

@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Hi! Messenger</string>
-    <string name="name">Name</string>
-    <string name="signIn">Sign In</string>
-    <string name="signUp">Sign Up</string>
+    <string name="name">Tên</string>
+    <string name="signIn">Đăng nhập</string>
+    <string name="signUp">Đăng ký</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="confirmPassword">Confirm Password</string>
-    <string name="welcome">Please sign In to continue</string>
-    <string name="create_new_account">Create new Account</string>
-    <string name="add_image">Add image</string>
+    <string name="password">Mật khẩu</string>
+    <string name="confirmPassword">Nhập lại mật khẩu</string>
+    <string name="welcome">Đăng nhập để tiếp tục</string>
+    <string name="create_new_account">Tạo tài khoản mới</string>
+    <string name="add_image">Thêm ảnh</string>
 </resources>
