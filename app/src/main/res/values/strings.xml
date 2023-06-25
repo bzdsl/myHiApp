@@ -12,4 +12,5 @@
     <string name="type_a_message">Type a message</string>
     <string name="select_user">Chọn người dùng</string>
     <string name="forget_password">Quên mật khẩu</string>
+    <string name="availability">Đang hoạt động</string>
 </resources>

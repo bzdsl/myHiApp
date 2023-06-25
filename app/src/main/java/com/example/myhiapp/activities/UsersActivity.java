@@ -1,7 +1,5 @@
 package com.example.myhiapp.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +15,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsersActivity extends AppCompatActivity implements UserListener {
+public class UsersActivity extends BaseActivity implements UserListener {
     private ActivityUsersBinding binding;
     private PreferenceManager preferenceManager;
     @Override
@@ -70,7 +68,7 @@ public class UsersActivity extends AppCompatActivity implements UserListener {
 
 
     private void showErrorMessage() {
-        binding.textErrorMessage.setText(String.format("%s","Không có ai hoạt động"));
+        binding.textErrorMessage.setText(String.format("%s","Something wrong"));
         binding.textErrorMessage.setVisibility(View.VISIBLE);
     }
 

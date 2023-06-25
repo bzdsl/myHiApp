@@ -55,8 +55,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/white"
         />
-    
-    
+
+
     <TextView
         android:id="@+id/textName"
         android:layout_width="0dp"
@@ -64,15 +64,38 @@
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:ellipsize="end"
-        android:gravity="center"
+        android:gravity="start"
         android:maxLines="1"
         android:textColor="@color/white"
-        android:textSize="@dimen/_14ssp"
+        android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/imageBack"
+        app:layout_constraintBottom_toTopOf="@id/textAvailability"
         app:layout_constraintEnd_toStartOf="@id/imageInfo"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@id/imageBack"
-        app:layout_constraintTop_toTopOf="@id/imageBack" />
+        app:layout_constraintTop_toTopOf="@id/imageBack"
+        app:layout_constraintVertical_bias="0" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textAvailability"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/_8sdp"-->
+<!--        android:layout_marginEnd="@dimen/_8sdp"-->
+<!--        android:ellipsize="end"-->
+<!--        android:gravity="start"-->
+<!--        android:maxLines="1"-->
+<!--        android:text="@string/availability"-->
+<!--        android:textColor="@color/secondary_text"-->
+<!--        android:textSize="@dimen/_8ssp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/imageBack"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/imageInfo"-->
+<!--        app:layout_constraintHorizontal_bias="0"-->
+<!--        app:layout_constraintStart_toEndOf="@id/imageBack"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/textName"-->
+<!--        app:layout_constraintVertical_bias="0" />-->
+
+
 
     <View
         android:id="@+id/viewSupporter"
@@ -149,7 +172,22 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
-
-
-
+    <TextView
+        android:id="@+id/textAvailability"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:text="@string/availability"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintBottom_toBottomOf="@id/imageBack"
+        app:layout_constraintEnd_toStartOf="@id/imageInfo"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/imageBack"
+        app:layout_constraintTop_toBottomOf="@id/textName"
+        app:layout_constraintVertical_bias="0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
